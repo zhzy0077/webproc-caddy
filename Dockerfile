@@ -18,5 +18,5 @@ COPY --from=builder /usr/bin/caddy /usr/bin/caddy
 
 COPY Caddyfile /etc/Caddyfile
 
-ENTRYPOINT ["webproc", "--configuration-file", "/etc/Caddyfile", "--on-save", "ignore", "--","caddy"]
+ENTRYPOINT ["webproc", "--configuration-file", "/etc/Caddyfile", "--on-save", "continue", "--on-exit", "restart", "--","caddy"]
 CMD ["run", "--config", "/etc/Caddyfile", "--adapter", "caddyfile", "--watch"]
