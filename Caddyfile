@@ -1,5 +1,7 @@
-:80, :443 {
-    gzip
-    log stdout
+localhost {
+	log {
+		output stdout
+		level INFO
+	}
     respond "Hello, world!"
 }
