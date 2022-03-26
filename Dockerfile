@@ -1,7 +1,7 @@
 FROM caddy:2-builder AS builder
 
 RUN xcaddy build \
-    --with https://github.com/caddy-dns/dnspod
+    --with github.com/caddy-dns/dnspod
 
 ENV WEBPROC_VERSION 0.2.2
 ENV WEBPROC_URL https://github.com/jpillora/webproc/releases/download/$WEBPROC_VERSION/webproc_linux_amd64.gz
