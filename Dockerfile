@@ -3,7 +3,7 @@ FROM caddy:2-builder AS builder
 RUN xcaddy build \
     --with github.com/caddy-dns/dnspod
 
-ENV WEBPROC_VERSION 0.2.2
+ENV WEBPROC_VERSION 0.4.0
 ENV WEBPROC_URL https://github.com/jpillora/webproc/releases/download/$WEBPROC_VERSION/webproc_linux_amd64.gz
 
 RUN apk update \
